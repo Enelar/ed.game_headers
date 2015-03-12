@@ -3,4 +3,7 @@
   <ItemGroup>
     <ClInclude Include="chunk.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="chunk.cpp" />
+  </ItemGroup>
 </Project>

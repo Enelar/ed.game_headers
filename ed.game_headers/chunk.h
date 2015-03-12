@@ -1,10 +1,16 @@
 #pragma once
 
+#include <unordered_map>
 #include <boost\multi_array.hpp>
 
 struct chunk
 {
-  typedef boost::multi_array<short, 3> container;
+  int x, z;
 
-  container blocks;
+  typedef boost::multi_array<short, 3> block;
+  typedef std::unordered_map<int, block> pilar;
+
+  pilar data;
+
+  block &AccessBlock(int y);
 };
